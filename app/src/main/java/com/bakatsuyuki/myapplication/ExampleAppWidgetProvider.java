@@ -29,4 +29,8 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
     }
+
+    public void updateAppWidget(){
+
+    }
 }
