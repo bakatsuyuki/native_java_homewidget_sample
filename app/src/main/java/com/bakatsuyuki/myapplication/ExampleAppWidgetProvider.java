@@ -6,6 +6,9 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
+import android.widget.TextView;
+
+import java.util.Date;
 
 public class ExampleAppWidgetProvider extends AppWidgetProvider {
 
@@ -23,8 +26,8 @@ public class ExampleAppWidgetProvider extends AppWidgetProvider {
             // Get the layout for the App Widget and attach an on-click listener
             // to the button
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.sample);
-            //views.setOnClickPendingIntent(R.id.button, pendingIntent);
-
+            views.setOnClickPendingIntent(R.id.text, pendingIntent);
+            views.setTextViewText(R.id.text, (new Date()).toString());
             // Tell the AppWidgetManager to perform an update on the current app widget
             appWidgetManager.updateAppWidget(appWidgetId, views);
         }
