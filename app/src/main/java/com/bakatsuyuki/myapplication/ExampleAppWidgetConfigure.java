@@ -15,7 +15,7 @@ import java.util.ArrayList;
 /**
  * The configuration screen for the ExampleAppWidgetProvider widget sample.
  */
-public class ExampleAppWidgetConfigure extends AppCompatActivity {
+public class ExampleAppWidgetConfigure extends Activity {
     static final String TAG = "ExampleAppWidgetConfigure";
     private static final String PREFS_NAME
             = "com.example.android.apis.appwidget.ExampleAppWidgetProvider";
